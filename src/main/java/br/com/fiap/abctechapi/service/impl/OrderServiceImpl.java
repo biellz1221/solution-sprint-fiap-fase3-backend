@@ -31,6 +31,11 @@ public class OrderServiceImpl implements OrderService {
         ArrayList<Assist> assists = new ArrayList<>();
         arrayAssists.forEach( i -> {
             Assist assist = assistRepository.findById(i).orElseThrow();
+
+            System.out.println("ASSIST -----");
+            System.out.println(assist);
+            System.out.println("ASSIST -----");
+
             assists.add(assist);
         });
         order.setServices(assists);

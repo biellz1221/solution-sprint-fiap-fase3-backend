@@ -25,4 +25,9 @@ public class AssistServiceImpl implements AssistService {
     public List<Assist> getServiceList() {
         return this.repository.findAll();
     }
+
+    @Override
+    public void saveAssist(Assist assist) throws Exception {
+        repository.save(assist);
+    }
 }
